@@ -1,0 +1,12 @@
+---
+- name: Instalación y configuración de Mysql
+  hosts: web
+  become: yes
+  remote_user: carlosmofe
+
+  tasks:
+  - name: Instala mysql latest.
+    apt:
+      name: mysql-server
+      update_cache: yes
+      state: latest

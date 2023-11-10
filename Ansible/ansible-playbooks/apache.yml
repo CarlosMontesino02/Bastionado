@@ -1,0 +1,28 @@
+---
+- name: Instalación y configuración de apache
+  hosts: web
+  become: yes
+  remote_user: carlosmofe
+
+  tasks:
+  - name: Instala apache latest.
+    apt:
+      name: apache2
+      update_cache: yes
+      state: latest
+
+  - name: Cambiar el puerto de escucha al 8081
+    lineinfile: dest=/etc/apache2/ports.conf regexp="^Listen 80" line="Listen 8081" state=present
+    notify:
+      - restart apache2
+
+  - name: Cambiar el index
+    ansible.builtin.copy:
+      src: ./web/index.html
+      dest: /var/www/html/index.html
+  
+  handlers:
+  - name: restart apache2
+    service:
+      name: apache2
+      state: restarted

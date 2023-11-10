@@ -1,0 +1,12 @@
+---
+- name: Instalación y configuración de NGINX
+  hosts: web
+  become: yes
+  remote_user: carlosmofe
+
+  tasks:
+  - name: Instala apache latest.
+    apt:
+      name: nginx
+      update_cache: yes
+      state: latest

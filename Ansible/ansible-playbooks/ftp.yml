@@ -1,0 +1,34 @@
+---
+- name: Instalación de vsftpd
+  hosts: web
+  become: yes
+  remote_user: carlosmofe
+
+  tasks:
+  - name: Instala vsftpd latest.
+    apt:
+      name: vsftpd
+      update_cache: yes
+      state: latest
+
+  - name: Crea grupo
+    group:
+      name: anpipada
+      state: present
+
+  - name: Crea un usuario para el ftp
+    ansible.builtin.user:
+      name: anpipada
+      comment: apnpiada
+      uid: 1040
+      group: anpipada
+
+  - name: Configuración vsftpd
+    ansible.builtin.copy:
+      src: ./ftp_conf/vsftpd.conf
+      dest: /etc/vsftpd.conf
+  - name: Usuario vsftpd
+
+    ansible.builtin.copy:
+      src: ./ftp_conf/vsftpd.chroot_list
+      dest: /etc/vsftpd.chroot_list

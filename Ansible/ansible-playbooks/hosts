@@ -1,0 +1,2 @@
+[web]
+192.168.122.231 ansible_ssh_user=carlosmofe
