@@ -12,7 +12,7 @@ Creo la ruta /etc/ansible/hosts y en ese fichero defino los diferentes hosts de 
 
 **ansible all --list-hosts**
 
-Ahora para realizar prubas, vamos a ahcer un ping, primero hay que configurar los servidores copiando nuestra clave pública, para ello:
+Ahora para realizar pruebas, vamos a hacer un ping, primero hay que configurar los servidores copiando nuestra clave pública, para ello:
 
 ``` bash
 $ ssh-keygen
