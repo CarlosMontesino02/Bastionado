@@ -18,26 +18,26 @@ Ahora que podemos iniciar sesión sin usar contraseña vamos a instalar el servi
 
 Comprobación de DNS:
 
-![](img/Captura%20desde%202024-04-16%2014-25-46.png)
+![](img/Parte%202/Captura%20desde%202024-04-16%2014-25-46.png)
 
 Comprobación de la instalación del servidor web:
-![](img/Captura%20desde%202024-04-16%2014-27-56.png)
+![](img/Parte%202/Captura%20desde%202024-04-16%2014-27-56.png)
 
 Proceso de configuración e instalación del certificado:
 
-![](img/Captura%20desde%202024-04-16%2014-30-39.png)
+![](img/Parte%202/Captura%20desde%202024-04-16%2014-30-39.png)
 
-![](img/Captura%20desde%202024-04-16%2014-32-05.png)
+![](img/Parte%202/Captura%20desde%202024-04-16%2014-32-05.png)
 
-![](img/Captura%20desde%202024-04-16%2014-32-13.png)
+![](img/Parte%202/Captura%20desde%202024-04-16%2014-32-13.png)
 
 Una pequeña simulación de renovación del certificado para confirmar la instalación del mismo:
 
-![](img/Captura%20desde%202024-04-16%2014-33-09.png)
+![](img/Parte%202/Captura%20desde%202024-04-16%2014-33-09.png)
 
 Comprobación de que el nuevo tráfico es HTTPS:
 
-![](img/Captura%20desde%202024-04-16%2014-33-31.png)
+![](img/Parte%202/Captura%20desde%202024-04-16%2014-33-31.png)
 
 ## Comparación entre certificados
 
@@ -45,11 +45,11 @@ En las siguientes capturas presento información de los certificados de mi servi
 
 ### Mi servidor
 
-![](img/Captura%20desde%202024-04-16%2014-41-25.png)![](img/Captura%20desde%202024-04-16%2014-41-42.png)
+![](img/Parte%202/Captura%20desde%202024-04-16%2014-41-25.png)![](img/Parte%202/Captura%20desde%202024-04-16%2014-41-42.png)
 ### Servidor de genialy
 
-![](img/Captura%20desde%202024-04-16%2014-43-35.png)
-![](img/Captura%20desde%202024-04-16%2014-43-54.png)![](img/Captura%20desde%202024-04-16%2014-44-46.png)
+![](img/Parte%202/Captura%20desde%202024-04-16%2014-43-35.png)
+![](img/Parte%202/Captura%20desde%202024-04-16%2014-43-54.png)![](img/Parte%202/Captura%20desde%202024-04-16%2014-44-46.png)
 
 Una de las principales diferencias que tenemos es el DNS CAA,  es un tipo de registro de recursos en el DNS que permite a los propietarios de dominios especificar qué autoridades de certificación (CAs) están autorizadas para emitir certificados digitales para ese dominio. Este registro ayuda a mejorar la seguridad en línea al limitar las CAs que pueden emitir certificados para un dominio específico, lo que reduce el riesgo de emisión indebida de certificados por parte de CAs no autorizadas. En el caso de mi dominio no tenemos ninguna y en el caso de Genialy tenemos varias, vemos algunos famosos como godaddy o amazon.
 
