@@ -79,7 +79,9 @@ La validez del certificado de Genialy se podría resumir en los siguientes punto
 5. **Cifrado adecuado**: El certificado SSL utiliza un algoritmo de cifrado bastante robusto.
 6. **Certificados intermedios y de raíz confiables**: Los certificados SSL a menudo se emiten a través de una cadena de confianza que incluye certificados intermedios y de raíz. Estos certificados son confiables y reconocidos por los navegadores y sistemas operativos.
 ### Primer certificado erróneo(Firmado por el mismo)
+
 ![](img/24-04-17_11-48.png)
+
 ![](img/24-04-17_11-50.png)
 
 No es de fiar porque carece de una validación independiente de una tercera parte de confianza, como una Autoridad de Certificación (CA, por sus siglas en inglés). Cuando un certificado SSL es emitido por una CA de confianza, significa que ha pasado por un proceso de verificación riguroso que confirma la identidad del propietario del dominio. Esto ayuda a garantizar a los usuarios que están interactuando con el sitio web legítimo y no con un sitio fraudulento.
@@ -89,13 +91,16 @@ En contraste, un certificado SSL autofirmado, es decir, firmado por el mismo dom
 ### Segundo certificado erróneo(Revocado)
 
 ![](img/24-04-17_12-17.png)
+
 ![](img/24-04-17_11-50_2.png)
   
 Un certificado SSL caducado no es seguro porque su fecha de vencimiento indica que la información de seguridad que proporciona ya no está actualizada ni garantizada. Los certificados SSL tienen una fecha de vencimiento establecida, después de la cual ya no se consideran válidos. Esto se debe a que la seguridad en línea es un campo en constante evolución, y las tecnologías y prácticas de seguridad pueden cambiar con el tiempo.
 
 ### Segundo certificado erróneo(Firmado por un proveedor no fiable)
 
-![](img/024-04-17_11-48_1.png)![](img/024-04-17_11-50_1.png)
+![](img/024-04-17_11-48_1.png)
+
+![](img/024-04-17_11-50_1.png)
 
   
 Los certificados SSL firmados por proveedores no fiables o no reconocidos presentan riesgos significativos para la seguridad en línea. Las Autoridades de Certificación (CA) son entidades confiables que emiten certificados SSL después de verificar la identidad del propietario del dominio. Sin embargo, los proveedores no fiables pueden no seguir los mismos estándares rigurosos de seguridad y autenticación.
