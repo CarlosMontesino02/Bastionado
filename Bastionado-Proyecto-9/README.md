@@ -18,26 +18,26 @@ Ahora que podemos iniciar sesión sin usar contraseña vamos a instalar el servi
 
 Comprobación de DNS:
 
-![](Captura%20desde%202024-04-16%2014-25-46.png)
+![](img/Captura%20desde%202024-04-16%2014-25-46.png)
 
 Comprobación de la instalación del servidor web:
-![](Captura%20desde%202024-04-16%2014-27-56.png)
+![](img/Captura%20desde%202024-04-16%2014-27-56.png)
 
 Proceso de configuración e instalación del certificado:
 
-![](Captura%20desde%202024-04-16%2014-30-39.png)
+![](img/Captura%20desde%202024-04-16%2014-30-39.png)
 
-![](Captura%20desde%202024-04-16%2014-32-05.png)
+![](img/Captura%20desde%202024-04-16%2014-32-05.png)
 
-![](Captura%20desde%202024-04-16%2014-32-13.png)
+![](img/Captura%20desde%202024-04-16%2014-32-13.png)
 
 Una pequeña simulación de renovación del certificado para confirmar la instalación del mismo:
 
-![](Captura%20desde%202024-04-16%2014-33-09.png)
+![](img/Captura%20desde%202024-04-16%2014-33-09.png)
 
 Comprobación de que el nuevo tráfico es HTTPS:
 
-![](Captura%20desde%202024-04-16%2014-33-31.png)
+![](img/Captura%20desde%202024-04-16%2014-33-31.png)
 
 ## Comparación entre certificados
 
@@ -45,11 +45,11 @@ En las siguientes capturas presento información de los certificados de mi servi
 
 ### Mi servidor
 
-![](Captura%20desde%202024-04-16%2014-41-25.png)![](Captura%20desde%202024-04-16%2014-41-42.png)
+![](img/Captura%20desde%202024-04-16%2014-41-25.png)![](img/Captura%20desde%202024-04-16%2014-41-42.png)
 ### Servidor de genialy
 
-![](Captura%20desde%202024-04-16%2014-43-35.png)
-![](Captura%20desde%202024-04-16%2014-43-54.png)![](Captura%20desde%202024-04-16%2014-44-46.png)
+![](img/Captura%20desde%202024-04-16%2014-43-35.png)
+![](img/Captura%20desde%202024-04-16%2014-43-54.png)![](img/Captura%20desde%202024-04-16%2014-44-46.png)
 
 Una de las principales diferencias que tenemos es el DNS CAA,  es un tipo de registro de recursos en el DNS que permite a los propietarios de dominios especificar qué autoridades de certificación (CAs) están autorizadas para emitir certificados digitales para ese dominio. Este registro ayuda a mejorar la seguridad en línea al limitar las CAs que pueden emitir certificados para un dominio específico, lo que reduce el riesgo de emisión indebida de certificados por parte de CAs no autorizadas. En el caso de mi dominio no tenemos ninguna y en el caso de Genialy tenemos varias, vemos algunos famosos como godaddy o amazon.
 
@@ -79,8 +79,8 @@ La validez del certificado de Genialy se podría resumir en los siguientes punto
 5. **Cifrado adecuado**: El certificado SSL utiliza un algoritmo de cifrado bastante robusto.
 6. **Certificados intermedios y de raíz confiables**: Los certificados SSL a menudo se emiten a través de una cadena de confianza que incluye certificados intermedios y de raíz. Estos certificados son confiables y reconocidos por los navegadores y sistemas operativos.
 ### Primer certificado erróneo(Firmado por el mismo)
-![](2024-04-17_11-48.png)
-![](2024-04-17_11-50.png)
+![](img/024-04-17_11-48.png)
+![](img/024-04-17_11-50.png)
 
 No es de fiar porque carece de una validación independiente de una tercera parte de confianza, como una Autoridad de Certificación (CA, por sus siglas en inglés). Cuando un certificado SSL es emitido por una CA de confianza, significa que ha pasado por un proceso de verificación riguroso que confirma la identidad del propietario del dominio. Esto ayuda a garantizar a los usuarios que están interactuando con el sitio web legítimo y no con un sitio fraudulento.
 
@@ -88,14 +88,14 @@ En contraste, un certificado SSL autofirmado, es decir, firmado por el mismo dom
 
 ### Segundo certificado erróneo(Revocado)
 
-![](2024-04-17_12-17.png)
-![](2024-04-17_11-50_2.png)
+![](img/024-04-17_12-17.png)
+![](img/024-04-17_11-50_2.png)
   
 Un certificado SSL caducado no es seguro porque su fecha de vencimiento indica que la información de seguridad que proporciona ya no está actualizada ni garantizada. Los certificados SSL tienen una fecha de vencimiento establecida, después de la cual ya no se consideran válidos. Esto se debe a que la seguridad en línea es un campo en constante evolución, y las tecnologías y prácticas de seguridad pueden cambiar con el tiempo.
 
 ### Segundo certificado erróneo(Firmado por un proveedor no fiable)
 
-![](2024-04-17_11-48_1.png)![](2024-04-17_11-50_1.png)
+![](img/024-04-17_11-48_1.png)![](img/024-04-17_11-50_1.png)
 
   
 Los certificados SSL firmados por proveedores no fiables o no reconocidos presentan riesgos significativos para la seguridad en línea. Las Autoridades de Certificación (CA) son entidades confiables que emiten certificados SSL después de verificar la identidad del propietario del dominio. Sin embargo, los proveedores no fiables pueden no seguir los mismos estándares rigurosos de seguridad y autenticación.
