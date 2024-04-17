@@ -10,7 +10,7 @@ En este proyecto vamos a poner en producción un servidor web(NGINX en mi caso),
 # Parte 1
 
 En esta parte se presenta un gif que demuestra la correcta configuración de las claves ssh que me permiten iniciar sesión sin usar contraseña.
-![](Parte%201.gif)
+![](img/Parte%201.gif)
 
 # Parte 2
 
